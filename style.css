@@ -34,6 +34,7 @@ h1 {
     color: var(--very-dark-blue);
     font-weight: 300;
     font-size: 48px;
+    text-align: center;
 }
 
 .subscribeText {
@@ -49,7 +50,7 @@ form {
     position: relative;
 }
 
-.input {
+input {
     width: 400px;
     height: 48px;
     border-radius: 24px;
@@ -125,4 +126,48 @@ form {
 
 .copyright {
     color: var(--very-dark-blue);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 680px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .subscribeText {
+        font-size: 16px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button,
+    input {
+        width: 360px;
+    }
+
+    .illustration {
+        width: 360px;
+    }
+
+    .errorMessage {
+        position: static;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .button,
+    input {
+        width: 300px;
+    }
+
+    .illustration {
+        width: 300px;
+    }
 }

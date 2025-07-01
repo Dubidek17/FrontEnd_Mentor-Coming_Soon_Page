@@ -7,6 +7,7 @@ button.addEventListener("click", function () {
     let emailInputValue = emailInput.value;
     if (emailInputValue == "") {
         errorMessage.innerHTML = "Whoops! It looks like you forgot to add your email";
+        errorMessage.classList.remove("hidden");
         emailInput.classList.add("wrong");
     }
 
@@ -18,10 +19,12 @@ button.addEventListener("click", function () {
         }
         if (isEmailCorrect == false) {
             errorMessage.innerHTML = "Please provide a valid email address";
+            errorMessage.classList.remove("hidden");
             emailInput.classList.add("wrong");
         }
         else {
             errorMessage.innerHTML = "";
+            errorMessage.classList.add("hidden");
             emailInput.classList.remove("wrong");
         }
     }
